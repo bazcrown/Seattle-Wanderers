@@ -1,9 +1,12 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
+.right {
+  float:right;
+}
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -12,6 +15,14 @@ ul {
 .topnav a {
   float: left;
   color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.search {
+  float:right;
+  color:white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -26,4 +37,16 @@ ul {
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
 }
