@@ -1,15 +1,28 @@
-ul {
-  list-style-type: none;
+h1{
+  text-align: center;
+}
+
+body{
   margin: 0;
-  padding: 0;
 }
 
 .right {
   float:right;
 }
+
+nav {
+  width:100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+  overflow: hidden;  background-color: #333;
+  height: 50px;
 }
 
 .topnav a {
@@ -34,7 +47,7 @@ ul {
   color: black;
 }
 
-.topnav a.active {
+.topnav a:active {
   background-color: #04AA6D;
   color: white;
 }
@@ -42,11 +55,10 @@ ul {
 footer {
   position: fixed;
   text-align: center;
-  padding: 3px;
+  padding: 20px 0;
   background-color: DarkSalmon;
   color: white;
   left: 0;
   bottom: 0;
   width: 100%;
-  
 }
