@@ -78,3 +78,33 @@ footer {
   font-size: 35px;
   cursor: pointer;
 }
+
+.column1 {
+  background:rgb(204, 96, 232);
+}
+
+.column2 {
+  background:rgb(154, 72, 174);
+}
+
+.column3 {
+  background:rgb(87, 41, 99);
+}
+
+.containerTab {
+  display:none;
+}
+
+#b1 {
+  background:rgb(204, 96, 232);
+}
+
+#b2 {
+  display:none;
+  background:rgb(154, 72, 174);
+}
+
+#b3 {
+  display:none;
+  background:rgb(87, 41, 99);
+}
