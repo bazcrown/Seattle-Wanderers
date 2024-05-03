@@ -122,3 +122,13 @@ footer {
 .col3{
   background-color: rgb(87, 41, 99);
 }
+
+#b1{
+  display: none;
+}
+#b2{
+  display: none;
+}
+#b3{
+  display: none;
+}
