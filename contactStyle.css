@@ -1,0 +1,106 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right {
+  float:right;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.search {
+  float:right;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  /*makes the page unscrollable*/
+  overflow: hidden;
+}
+
+.background{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  /*makes the background image blurred with a little light under it*/
+  background-image: linear-gradient(rgba(0,0,0,0.7), #616574), url(background.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+form{
+  margin: 0 auto;
+  width: 250px;
+  color: white;
+}
+
+button{
+  width: auto;
+  height: auto;
+}
+
+label, h1 {
+  font-size: 50px;
+  display: inline-block;
+  width: 400px; /* Adjust the width as needed */
+  text-align: left; /* Align text to the left */
+  margin-right: 10px; /* Add some space between the label and input */
+}
+
+textarea, input{
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 8px; /* Add padding for better appearance */
+}
+
+h1{
+  text-align: center;
+  width: auto;
+  margin: auto;
+}
+
+#message{
+  width: 300px;
+  height: 200px;
+}
