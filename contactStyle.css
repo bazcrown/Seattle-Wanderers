@@ -80,9 +80,10 @@ button{
   height: auto;
 }
 
-label, h1 {
+.background label, .background  h1 {
   font-size: 50px;
   display: inline-block;
+
   width: 400px; /* Adjust the width as needed */
   text-align: left; /* Align text to the left */
   margin-right: 10px; /* Add some space between the label and input */
@@ -94,13 +95,14 @@ textarea, input{
   padding: 8px; /* Add padding for better appearance */
 }
 
-h1{
+.background h1{
   text-align: center;
   width: auto;
   margin: auto;
+  color: white;
 }
 
 #message{
   width: 300px;
-  height: 200px;
+  height: 100px;
 }

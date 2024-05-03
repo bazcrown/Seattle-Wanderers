@@ -4,17 +4,22 @@
     <meta charset = "UTF-8">
     <title>Contact Us</title>
     <link rel="stylesheet" type="text/css" href="contactStyle.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="socialMedia.css">
     <script src="contactUs.js" defer></script>
+    
   </head>
   <body>
-    <nav>
+    <div class="header">
+      <h1>Always Active</h1>
+  </div>
+  <nav>
       <div class="topnav">
           <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="underconstruction.html">About</a></li>
-              <li "><a href="contactUs.html">Contact</a></li>
-
-
+              <li><a href="contactUs.html">Contact</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="activities.html">Activities</a></li>
           </ul>
           <div class="search">
               <input type="text" placeholder="Search..">
@@ -26,13 +31,7 @@
 
 
 
-  <footer>
-      We're here to make finding activities easier!
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-instagram"></a>
-
-  </footer>
+  
     <div class = "background">
       <h1> Contact Us</h1>
       <form>
@@ -46,9 +45,16 @@
         <input type="subject" id="subject" name="subject" required>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <textarea id="message" name="message" rows="2" required></textarea>
         <button id="button" type="button">Submit</button>
       </form>
     </div>
+
+    <footer>
+      We're here to make finding activities easier!
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+    </footer>
   </body>
 </html>
