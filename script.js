@@ -1,6 +1,7 @@
 // Interactive boxes
 function openTab(tabName) {
     var i, x;
+    console.log("Made it to open tab");
     x = document.getElementsByClassName("containerTab");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
