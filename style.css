@@ -132,3 +132,19 @@ footer {
 #b3{
   display: none;
 }
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.logo {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
