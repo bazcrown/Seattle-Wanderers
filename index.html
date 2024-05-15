@@ -1,61 +1,68 @@
 <html>
     <head>
-        <title>Team 1</title>
+        <title>Always Active</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="socialMedia.css">
-        <script src="script.js"></script>
         <style>
         </style>
     </head>
 
     <body>
+        <div class="header">
+            <h1>Always Active</h1>
+        </div>
         <nav>
             <div class="topnav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="underconstruction.html">About</a></li>
-                    <li><a href="#">Contact</a></li>            
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
                 </ul>
                 <div class="search">
                     <input type="text" placeholder="Search..">
                 </div>
             </div>
         </nav>
-
         <!-- Slide Show -- needs pictures! -->
         <section>
-            <img class="mySlides" src="" style="width:100%">
-            <img class="mySlides" src="" style="width:100%">
-            <img class="mySlides" src="" style="width:100%">
+            <img class="mySlides" src="">
+            <img class="mySlides" src="">
+            <img class="mySlides" src="">
         </section>
 
         <div>
             <h1>Welcome to Seattle Wanderers!</h1>
-            <p>This page is aimed to help you figure out a fun weekend activity, late afternoon coffee pick me up or Friday night dinner.</p>
+            <p>
+                We're Seattle Wanderers and this page is aimed to help you figure out a fun weekend activity, 
+                late afternoon coffee pick me up or Friday night dinner. <br>
+                Our goal is to help you find things to do around the area!
+            </p>
         </div>
 
         <!-- The grid: three columns -->
         <div class="row">
-            <div class="column1" onclick="openTab('b1');">Things to Do</div>
-            <div class="column2" onclick="openTab('b2');">Where to Eat</div>
-            <div class="column3" onclick="openTab('b3');">Fun Sips</div>
+
+            <div class="column col1" onclick="openTab('b1');" >Activities</div>
+            <div class="column col2" onclick="openTab('b2');" >Food</div>
+            <div class="column col3" onclick="openTab('b3');" >Drinks</div>
         </div>
-        
+        <script src="script.js"></script>
         <!-- The expanding grid (hidden by default) -->
-        <div id="b1" class="containerTab">
+        <div id="b1" class="containerTab col1"">
             <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
             <h2>Things to Do</h2>
             <p>Looking for an activity? Click here to see activities going on around the city.</p>
         </div>
-        
-        <div id="b2" class="containerTab">
+
+        <div id="b2" class="containerTab col2" >
             <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
             <h2>Where to Eat</h2>
             <p>Looking to grab a bite? Click here to see various restaurants around the city.</p>
         </div>
         
-        <div id="b3" class="containerTab">
+        <div id="b3" class="containerTab col3" >
             <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
             <h2>Fun Sips</h2>
             <p>Coffee... drinks...? Click here to see some of the best coffee shops and bars.</p>
@@ -63,10 +70,10 @@
 
         <footer>
             We're here to make finding activities easier!
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            
+            <a href="http://www.facebook.com" class="fa fa-facebook"></a>
+            <a href="http://www.x.com" class="fa fa-twitter"></a>
+            <a href="http://www.instagram.com" class="fa fa-instagram"></a>
+
         </footer>
     </body>
 </html>
