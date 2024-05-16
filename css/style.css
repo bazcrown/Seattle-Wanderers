@@ -63,7 +63,6 @@ nav ul {
 }
 
 footer {
-  position: fixed;
   text-align: center;
   padding: 20px 0;
   background-color: DarkSalmon;
@@ -94,6 +93,14 @@ footer {
   padding: 20px;
   color: white;
 }
+
+.textContainer {
+  background-color: rgb(100, 72, 107);
+  color:#04AA6D;
+  width: 100%;
+  padding: 20px;
+}
+
 .row{
   position: relative;
   text-align: center;
