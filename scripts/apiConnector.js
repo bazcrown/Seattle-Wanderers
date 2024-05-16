@@ -1,6 +1,13 @@
 
-var xhr = new XMLHttpRequest();
+function getFileNameFromUrl(url) {
+  const urlParts = url.split('/');
+  const fileName = urlParts[urlParts.length - 1];
 
+  return fileName.replace(/\s+/g, '-');
+}
+
+
+var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://j9as09z9sd.execute-api.us-west-2.amazonaws.com/prod/seattle', true);
 
 const gridContainer = document.querySelector('.grid-container');
@@ -8,32 +15,31 @@ const gridContainer = document.querySelector('.grid-container');
 xhr.onload = function() {
   if (xhr.status === 200) {
     var responseData = JSON.parse(xhr.responseText);
-    console.log(responseData);
-    if (responseData.hasOwnProperty('body')) {
-      JSON.parse(responseData.body).forEach(function(item) {
-        if (item.hasOwnProperty('jsonData')) {
-          item.jsonData = JSON.parse(item.jsonData);
+    responseData.forEach(function(item) {
+      if (item.hasOwnProperty('jsonData')) {
+        item.jsonData = JSON.parse(item.jsonData);
 
-          const gridItem = document.createElement('div');
-          gridItem.className = 'grid-item';
+        const gridItem = document.createElement('div');
+        gridItem.className = 'grid-item';
 
-          const gridItemTitle = document.createElement('h3');
-          gridItemTitle.textContent = item.jsonData.name;
+        const gridItemTitle = document.createElement('h3');
+        gridItemTitle.textContent = item.jsonData.name;
 
-          const gridItemImage = document.createElement('img');
-          gridItemImage.src = item.jsonData.photo.images.medium.url;
-          gridItemImage.alt = item.jsonData.photo.caption;
+        const gridItemImage = document.createElement('img');
+        urlPath = getFileNameFromUrl(item.jsonData.photo.images.medium.url)
+        gridItemImage.src = "images/" + urlPath;
 
-          gridItem.appendChild(gridItemTitle);
-          gridItem.appendChild(gridItemImage);
-          gridContainer.appendChild(gridItem);
-        }
-      });
-    } else {
-      console.error('Invalid response data structure');
-    }
+        gridItemImage.alt = item.jsonData.photo.caption;
 
-    // console.log(responseData);
+        const gridItemLink = document.createElement('a');
+        gridItemLink.href = "activity.html";
+
+        gridItemLink.appendChild(gridItem);
+        gridItem.appendChild(gridItemTitle);
+        gridItem.appendChild(gridItemImage);
+        gridContainer.appendChild(gridItemLink);
+      }
+    });
   } else {
     console.error('Request failed. Status:', xhr.status);
   }

@@ -22,7 +22,13 @@
                     <li><a href="activities.html">Activities</a></li>
                 </ul>
                 <div class="search">
-                    <input type="text" placeholder="Search..">
+                    <form action="/action_page.php">
+                        <input list="search" name="search">
+                        <datalist id="searchdatalist">
+                        </datalist>
+                        <input type="submit">
+                    </form>
+                    <script src="./scripts/search.js"></script>
                 </div>
             </div>
         </nav>
