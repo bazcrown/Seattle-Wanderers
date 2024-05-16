@@ -26,13 +26,16 @@ xhr.onload = function() {
         gridItemTitle.textContent = item.jsonData.name;
 
         const gridItemImage = document.createElement('img');
-        urlPath = getFileNameFromUrl(item.jsonData.photo.images.medium.url)
+        urlPath = getFileNameFromUrl(item.jsonData.photo.images.medium.url);
         gridItemImage.src = "images/" + urlPath;
 
         gridItemImage.alt = item.jsonData.photo.caption;
 
         const gridItemLink = document.createElement('a');
-        gridItemLink.href = "activity.html";
+        
+        // console.log(item.id)
+        gridItemLink.id = item.id;
+        gridItemLink.href = "activity.html?id=" + item.id;
 
         gridItemLink.appendChild(gridItem);
         gridItem.appendChild(gridItemTitle);
