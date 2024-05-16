@@ -1,12 +1,3 @@
-
-function getFileNameFromUrl(url) {
-    const urlParts = url.split('/');
-    const fileName = urlParts[urlParts.length - 1];
-
-    return fileName.replace(/\s+/g, '-');
-}
-
-
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://j9as09z9sd.execute-api.us-west-2.amazonaws.com/prod/seattle', true);
 
@@ -14,6 +5,7 @@ xhr.open('GET', 'https://j9as09z9sd.execute-api.us-west-2.amazonaws.com/prod/sea
 
 // Find the datalist element with the id 'search'
 var dataList = document.getElementById('search');
+console.log("Found search data list");
 /*
 // Check if the datalist exists
 if (dataList) {
@@ -40,7 +32,7 @@ if (xhr.status === 200) {
     responseData.forEach(function(item) {
       if (item.hasOwnProperty('jsonData')) {
         item.jsonData = JSON.parse(item.jsonData);
-
+        console.log("")
         const searchItem = document.createElement('option');
         searchItem.text = item.jsonData.name;
 

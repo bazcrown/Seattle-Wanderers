@@ -14,6 +14,7 @@
         </div>
         <nav>
             <div class="topnav">
+                <a href="index.html" class="logo-link"><img src="seattle-wanderers-logo.png" alt="Seattle Wanderers Logo" class="logo"></a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contactus.html">Contact</a></li>
@@ -23,7 +24,7 @@
                 <div class="search">
                     <form action="/action_page.php">
                         <input list="search" name="search">
-                        <datalist id="searchdatalist">
+                        <datalist id="search">
                         </datalist>
                         <input type="submit">
                     </form>
@@ -31,11 +32,16 @@
                 </div>
             </div>
         </nav>
-        <!-- Slide Show -- needs pictures! -->
         <section>
-            <img class="mySlides" src="">
-            <img class="mySlides" src="">
-            <img class="mySlides" src="">
+            <img class="mySlides" src="SlideshowJPGs/bainbridgeferry.jpeg">
+            <img class="mySlides" src="SlideshowJPGs/cityskylinerainier.webp">
+            <img class="mySlides" src="SlideshowJPGs/fremontbridge.jpeg">
+            <img class="mySlides" src="SlideshowJPGs/lakawashington.jpeg">
+            <img class="mySlides" src="SlideshowJPGs/needlecloudy.jpeg">
+            <img class="mySlides" src="SlideshowJPGs/pikemarket.webp">
+            <img class="mySlides" src="SlideshowJPGs/waterfront.jpeg">
+            <img class="mySlides" src="SlideshowJPGs/waterskyline.webp">
+            <img class="mySlides" src="SlideshowJPGs/sunsetskyline.webp">
         </section>
 
         <div class="textContainer">
@@ -50,21 +56,20 @@
         <!-- The grid: three columns -->
         <div class="row">
             <div class="column col1" onclick="openTab('b1');" >Activities</div>
-            <div class="column col2" onclick="openTab('b2');" >Food</div>
+            <div class="column col2" onclick="openTab('b2');">Food</div>
             <div class="column col3" onclick="openTab('b3');" >Drinks</div>
         </div>
         <script src="./scripts/script.js"></script>
         <!-- The expanding grid (hidden by default) -->
-        <div id="b1" class="containerTab col1"">
+        <div id="b1" class="containerTab col1">
             <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
             <h2>Things to Do</h2>
             <p>Looking for an activity? Click here to see activities going on around the city.</p>
         </div>
-        
         <div id="b2" class="containerTab col2" >
             <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
             <h2>Where to Eat</h2>
-            <p>Looking to grab a bite? Click here to see various restaurants around the city.</p>
+            <p>Looking to grab a bite? Click ><a href="food.html">here</a> to see various restaurants around the city.</p>
         </div>
         
         <div id="b3" class="containerTab col3" >
