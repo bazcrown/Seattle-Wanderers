@@ -72,9 +72,10 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+.footer{
   
 }
-
 .column {
   float: left;
   width: 33.33%;
