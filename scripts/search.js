@@ -28,7 +28,7 @@ if (dataList) {
 xhr.onload = function() {
 if (xhr.status === 200) {
     var responseData = JSON.parse(xhr.responseText);
-    console.log(responseData);
+    console.log(responseData['jsonData']);
     responseData.forEach(function(item) {
       if (item.hasOwnProperty('jsonData')) {
         item.jsonData = JSON.parse(item.jsonData);
