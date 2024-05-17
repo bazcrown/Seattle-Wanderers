@@ -63,6 +63,8 @@ nav ul {
 }
 
 footer {
+  position: block;
+  margin-top: auto;
   text-align: center;
   padding: 20px 0;
   background-color: DarkSalmon;
