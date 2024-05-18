@@ -33,6 +33,8 @@ if (dataList) {
     console.error("Datalist with id 'search' not found.");
 }*/
 
+var nameDict = new Object();
+
 xhr.onload = function() {
 if (xhr.status === 200) {
     var responseData = JSON.parse(xhr.responseText);
@@ -40,11 +42,14 @@ if (xhr.status === 200) {
     responseData.forEach(function(item) {
       if (item.hasOwnProperty('jsonData')) {
         item.jsonData = JSON.parse(item.jsonData);
+        //console.log(item.jsonData.name);
+        //console.log(item.id);
+        nameDict[item.jsonData.name] = item.id;
 
         const searchItem = document.createElement('option');
         searchItem.text = item.jsonData.name;
 
-        dataList.appendChild(searchItem);
+        dataList.appendChild(searchItexm);
       }
     });
 
@@ -59,3 +64,12 @@ console.error('Request failed');
 };
 
 xhr.send();
+
+let searchText = document.getElementById("searchText");
+const submitBtn = document.getElementById("submit");
+function submitClicked(){
+    //console.log(searchText.value);
+    //console.log(nameDict[searchText.value]);
+    location.href = "activity.html?id=" + nameDict[searchText.value];
+}
+submitBtn.addEventListener('click', submitClicked);
