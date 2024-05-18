@@ -5,39 +5,39 @@
   body {
     font-family: Arial;
     padding: 20px;
-    background: #f1f1f1; /* make sure to change this to purple!! */
+    background: rgb(229, 174, 231); /* make sure to change this to purple!! }*/
   }
   
   /* Header Title */
-  .header {
+  .foodHeader {
     padding: 30px;
     font-size: 40px;
     text-align: center;
-    background: white; /* make sure to change this to purple!! */
+    background-color: rgb(229, 174, 231);
   }
   
   /* two unequal columns that float next to each other */
   /* Left column */
-  .leftcolumn {   
+  .foodLeftColumn {   
     float: left;
     width: 75%;
   }
   
   /* Right column */
-  .rightcolumn {
+  .foodRightColumn {
     float: left;
     width: 25%;
     padding-left: 20px;
   }
   
-  .card {
+  .foodCard {
      background-color: white; /* change color to match with palette */
      padding: 20px;
      margin-top: 20px;
   }
   
   /* Clear floats after the columns */
-  .row:after {
+  .foodRow:after {
     content: "";
     display: table;
     clear: both;
@@ -45,7 +45,7 @@
   
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
+    .foodLeftColumn, .foodRightColumn {   
       width: 100%;
       padding: 0;
     }
