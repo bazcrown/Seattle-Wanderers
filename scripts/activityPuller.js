@@ -15,7 +15,6 @@ function getFileNameFromUrl(url) {
   return fileName.replace(/\s+/g, '-');
 }
 
-
 const currentUrl = window.location.href;
 const pulledId = getParameterByName(currentUrl, 'id');
 
@@ -23,9 +22,15 @@ let xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://j9as09z9sd.execute-api.us-west-2.amazonaws.com/prod/seattle?id=' + pulledId, true);
 xhr.setRequestHeader('Content-Type', 'application/json');
 
+let activityName = document.getElementById("activityName");
+let activityImage = document.getElementById("activityImage");
+let activityLocation = document.getElementById("activityLocation");
+
+
 xhr.onload = function() {
     if (xhr.status === 200) {
       let responseData = JSON.parse(xhr.responseText);
+      let jsonData = JSON.parse(responseData.Item.jsonData);
       console.log(responseData);
       jsonData = JSON.parse(responseData.Item.jsonData);
 
