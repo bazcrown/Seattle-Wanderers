@@ -11,23 +11,30 @@
   </head>
   <body>
     <div class="header">
-      <h1>Always Active</h1>
+        <h1>Always Active</h1>
     </div>
     <nav>
         <div class="topnav">
             <a href="index.html" class="logo-link"><img src="seattle-wanderers.png" alt="Seattle Wanderers Logo" class="logo"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="contactUs.html">Contact</a></li>
+                <li><a href="contactus.html">Contact</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="activities.html">Activities</a></li>
             </ul>
             <div class="search">
-                <input type="text" placeholder="Search..">
+                <form action="/action_page.php">
+                    <input list="search" name="search" id="searchText">
+                    <datalist id="search">
+                    </datalist>
+                    <input type="button" id="submit" name="submit" value="Submit">
+                </form>
+                <script src="./scripts/search.js"></script>
             </div>
         </div>
     </nav>
 
+    <div class="foodBody">
     <div class="foodHeader">
         <h2>Food in the City</h2>
     </div>
@@ -170,7 +177,7 @@
           <div class="foodCard">
             <h2>Itsumono</h2>
             <h5>Izakaya, Gastro Pub</h5>
-            <div><img src="FoodJPGs/istumono.png" alt="Itsumono"></div>
+            <div><img src="FoodJPGs/itsumono.png" alt="Itsumono"></div>
             <p>610 South Jackson Street, Seattle; 206-682-1828; <a href="https://itsumonoseattle.wixsite.com/home">itsumonoseattle.wixsite.com</a></p>
             <p>
                 This International District spot describes itself as “mukokuseki,” a Japanese term that roughly 
@@ -201,6 +208,7 @@
             </p>
           </div>
         </div>
+    </div>
     </div>
 
   
