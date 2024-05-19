@@ -41,7 +41,7 @@ if (xhr.status === 200) {
         const searchItem = document.createElement('option');
         searchItem.text = item.jsonData.name;
 
-        dataList.appendChild(searchItexm);
+        dataList.appendChild(searchItem);
       }
     });
 
