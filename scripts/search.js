@@ -65,3 +65,13 @@ function submitClicked(){
     location.href = "activity.html?id=" + nameDict[searchText.value];
 }
 submitBtn.addEventListener('click', submitClicked);
+
+const form = document.querySelector('form');
+const input = document.querySelector('input');
+
+searchText.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault(); // prevent default behavior
+    location.href = "activity.html?id=" + nameDict[searchText.value];
+  }
+});
