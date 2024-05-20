@@ -1,5 +1,5 @@
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://j9as09z9sd.execute-api.us-west-2.amazonaws.com/prod/seattle', true);
+var xhr1 = new XMLHttpRequest();
+xhr1.open('GET', 'https://j9as09z9sd.execute-api.us-west-2.amazonaws.com/prod/seattle', true);
 
 //const gridContainer = document.querySelector('.search');
 
@@ -27,9 +27,9 @@ if (dataList) {
 
 var nameDict = new Object();
 
-xhr.onload = function() {
-if (xhr.status === 200) {
-    var responseData = JSON.parse(xhr.responseText);
+xhr1.onload = function() {
+if (xhr1.status === 200) {
+    var responseData = JSON.parse(xhr1.responseText);
     console.log(responseData['jsonData']);
     responseData.forEach(function(item) {
       if (item.hasOwnProperty('jsonData')) {
@@ -47,15 +47,15 @@ if (xhr.status === 200) {
 
     // console.log(responseData);
 } else {
-    console.error('Request failed. Status:', xhr.status);
+    console.error('Request failed. Status:', xhr1.status);
 }
 };
 
-xhr.onerror = function() {
+xhr1.onerror = function() {
 console.error('Request failed');
 };
 
-xhr.send();
+xhr1.send();
 
 let searchText = document.getElementById("searchText");
 const submitBtn = document.getElementById("submit");
