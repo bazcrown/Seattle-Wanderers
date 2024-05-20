@@ -1,0 +1,20 @@
+
+#activityContainer {
+    position: relative;
+    width: 80%;
+    transform: translate(-50%);
+    left: 50%;
+}
+#activityContainer img {
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+}
+
+#activityName {
+    text-align: center;
+}
+
+#activityDescription {
+    text-align: left;
+}
