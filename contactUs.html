@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="stylesheet" type="text/css" href="./css/socialmedia.css">
     <script src="./scripts/contactus.js" defer></script>
-    
+
   </head>
   <body>
     <div class="header">
@@ -32,22 +32,20 @@
 
 
 
-  
+
     <div class = "background">
       <h1> Contact Us</h1>
-      <form>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="b577f2c5-cd3f-4e78-8641-fc14d0f4f76e">
         <label for="name">Name:</label>
-        <input type="name" id="name" name="name" required>
+        <input type="text" name="name" required>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="subject">Subject:</label>
-        <input type="subject" id="subject" name="subject" required>
-
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="2" required></textarea>
-        <button id="button" type="button">Submit</button>
+        <button id="button" type="submit">Submit</button>
       </form>
     </div>
 
