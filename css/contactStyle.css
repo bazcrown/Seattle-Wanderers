@@ -1,12 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.right {
-  float:right;
-}
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -20,13 +24,10 @@ ul {
   text-decoration: none;
   font-size: 17px;
 }
-.search {
-  float:right;
-  color:white;
-  text-align: center;
+
+.topnav .search {
+  float: right;
   padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
 }
 
 .topnav a:hover {
@@ -40,69 +41,79 @@ ul {
 }
 
 footer {
-  position: fixed;
   text-align: center;
-  padding: 3px;
+  padding: 10px;
   background-color: DarkSalmon;
   color: white;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-
 }
 
-body{
-  padding: 0;
-  margin: 0;
-  /*makes the page unscrollable*/
-  overflow: hidden;
-}
 
-.background{
-  margin: 0;
-  padding: 0;
+.background {
+  padding: 20px;
   width: 100%;
-  height: 100vh;
-  /*makes the background image blurred with a little light under it*/
+  height: calc(100vh - 50px);
   background-image: linear-gradient(rgba(0,0,0,0.7), #616574), url(background.jpeg);
   background-position: center;
   background-size: cover;
+  overflow: auto;
 }
 
-form{
-  margin: 0 auto;
+form {
+  margin: 20px auto;
   width: 250px;
   color: white;
 }
 
-button{
+button {
   width: auto;
   height: auto;
 }
 
-.background label, .background  h1 {
-  font-size: 50px;
-  display: inline-block;
-
-  width: 400px; /* Adjust the width as needed */
-  text-align: left; /* Align text to the left */
-  margin-right: 10px; /* Add some space between the label and input */
+.background label, .background h1, .background h2 {
+  font-size: 24px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
-textarea, input{
+textarea, input {
   background: transparent;
   border: 1px solid #ccc;
-  padding: 8px; /* Add padding for better appearance */
+  padding: 8px;
+  width: 100%;
 }
 
-.background h1{
-  text-align: center;
-  width: auto;
-  margin: auto;
+.background h2 {
+  text-align: left;
   color: white;
 }
 
-#message{
-  width: 300px;
-  height: 100px;
+.background h1 {
+  text-align: center;
+  color: white;
+}
+
+#message {
+  height: 50px;
+}
+
+.faq {
+  margin: 10px 0;
+  color: white;
+  text-align: left;
+}
+
+.faq h3 {
+  color: white;
+  font-size: 18px;
+}
+
+.faq p {
+  color: white;
+  margin-bottom: 10px;
 }
