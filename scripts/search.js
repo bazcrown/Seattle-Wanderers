@@ -62,7 +62,11 @@ const submitBtn = document.getElementById("submit");
 function submitClicked(){
     //console.log(searchText.value);
     //console.log(nameDict[searchText.value]);
-    location.href = "activity.html?id=" + nameDict[searchText.value];
+    if(nameDict[searchText.value] != undefined){
+      location.href = "activity.html?id=" + nameDict[searchText.value];
+    }
+
+    console.log(nameDict[searchText.value]);
 }
 submitBtn.addEventListener('click', submitClicked);
 
@@ -72,6 +76,8 @@ const input = document.querySelector('input');
 searchText.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     event.preventDefault(); // prevent default behavior
-    location.href = "activity.html?id=" + nameDict[searchText.value];
+    if(nameDict[searchText.value] != undefined){
+      location.href = "activity.html?id=" + nameDict[searchText.value];
+    }
   }
 });
