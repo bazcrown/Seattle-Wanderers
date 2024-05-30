@@ -11,7 +11,7 @@
         </div>
         <nav>
             <div class="topnav">
-                <a href="index.html" class="logo-link"><img src="seattle-wanderers-logo.png" alt="Seattle Wanderers Logo" class="logo"></a>
+                <a href="index.html" class="logo-link"><img src="seattle-wanderers.png" alt="Seattle Wanderers Logo" class="logo"></a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contactus.html">Contact</a></li>
@@ -19,7 +19,13 @@
                     <li><a href="activities.html">Activities</a></li>
                 </ul>
                 <div class="search">
-                    <input type="text" placeholder="Search..">
+                    <form >
+                        <input list="search" name="search" id="searchText">
+                        <datalist id="search">
+                        </datalist>
+                        <input type="button" id="submit" name="submit" value="Submit">
+                    </form>
+                    <script src="./scripts/search.js"></script>
                 </div>
             </div>
         </nav>

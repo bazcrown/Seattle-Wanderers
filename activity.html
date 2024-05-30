@@ -4,7 +4,9 @@
 
     <head>
        <link rel="stylesheet" type="text/css" href="./css/style.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" type="text/css" href="./css/socialMedia.css">
+       <link rel="stylesheet" type="text/css" href="./css/activityStyle.css">
     </head>
 
     <body>
@@ -14,19 +16,30 @@
         </div>
         <nav>
             <div class="topnav">
+                <a href="index.html" class="logo-link"><img src="seattle-wanderers.png" alt="Seattle Wanderers Logo" class="logo"></a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="contactUs.html">Contact</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="activities.html">Activities</a></li>
                 </ul>
                 <div class="search">
-                    <input type="text" placeholder="Search..">
+                    <form >
+                        <input list="search" name="search" id="searchText">
+                        <datalist id="search">
+                        </datalist>
+                        <input type="button" id="submit" name="submit" value="Submit">
+                    </form>
+                    <script src="./scripts/search.js"></script>
                 </div>
             </div>
         </nav>
-        <div>
-            
+
+        <div id="activityContainer">
+            <h2 id="activityName"></h2>
+            <img id="activityImage">
+            <p id="addressLine"></p>
+            <p id="activityDescription"></p>
         </div>
 
         <script src="./scripts/activityPuller.js"></script>

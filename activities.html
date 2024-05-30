@@ -4,6 +4,7 @@
 
     <head>
        <link rel="stylesheet" href="./css/activities.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" type="text/css" href="./css/style.css">
        <link rel="stylesheet" type="text/css" href="./css/socialMedia.css">
     </head>
@@ -15,7 +16,7 @@
         </div>
         <nav>
             <div class="topnav">
-                <a href="index.html" class="logo-link"><img src="seattle-wanderers-logo.png" alt="Seattle Wanderers Logo" class="logo"></a>
+                <a href="index.html" class="logo-link"><img src="seattle-wanderers.png" alt="Seattle Wanderers Logo" class="logo"></a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contactus.html">Contact</a></li>
@@ -23,20 +24,29 @@
                     <li><a href="activities.html">Activities</a></li>
                 </ul>
                 <div class="search">
-                    <input type="text" placeholder="Search..">
+                    <form>
+                        <input list="search" name="search" id="searchText">
+                        <datalist id="search">
+                        </datalist>
+                        <input type="button" id="submit" name="submit" value="Submit">
+                    </form>
+                    <script src="./scripts/search.js"></script>
                 </div>
             </div>
         </nav>
         <div class="grid-container"></div>
         <script src="./scripts/apiConnector.js"></script>
 
-        <footer>
+        
+        <div class="footer">
+        <footer style="position:fixed">
             We're here to make finding activities easier!
             <a href="http://www.facebook.com" class="fa fa-facebook"></a>
             <a href="http://www.x.com" class="fa fa-twitter"></a>
             <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-
+        
         </footer>
+    </div>
     </body>
 
 </html>

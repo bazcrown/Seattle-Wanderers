@@ -1,5 +1,5 @@
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://j9as09z9sd.execute-api.us-west-2.amazonaws.com/prod/seattle', true);
+var xhr1 = new XMLHttpRequest();
+xhr1.open('GET', 'https://j9as09z9sd.execute-api.us-west-2.amazonaws.com/prod/seattle', true);
 
 //const gridContainer = document.querySelector('.search');
 
@@ -25,14 +25,19 @@ if (dataList) {
     console.error("Datalist with id 'search' not found.");
 }*/
 
-xhr.onload = function() {
-if (xhr.status === 200) {
-    var responseData = JSON.parse(xhr.responseText);
-    console.log(responseData);
+var nameDict = new Object();
+
+xhr1.onload = function() {
+if (xhr1.status === 200) {
+    var responseData = JSON.parse(xhr1.responseText);
+    console.log(responseData['jsonData']);
     responseData.forEach(function(item) {
       if (item.hasOwnProperty('jsonData')) {
         item.jsonData = JSON.parse(item.jsonData);
-        console.log("")
+        //console.log(item.jsonData.name);
+        //console.log(item.id);
+        nameDict[item.jsonData.name] = item.id;
+
         const searchItem = document.createElement('option');
         searchItem.text = item.jsonData.name;
 
@@ -42,12 +47,37 @@ if (xhr.status === 200) {
 
     // console.log(responseData);
 } else {
-    console.error('Request failed. Status:', xhr.status);
+    console.error('Request failed. Status:', xhr1.status);
 }
 };
 
-xhr.onerror = function() {
+xhr1.onerror = function() {
 console.error('Request failed');
 };
 
-xhr.send();
+xhr1.send();
+
+let searchText = document.getElementById("searchText");
+const submitBtn = document.getElementById("submit");
+function submitClicked(){
+    //console.log(searchText.value);
+    //console.log(nameDict[searchText.value]);
+    if(nameDict[searchText.value] != undefined){
+      location.href = "activity.html?id=" + nameDict[searchText.value];
+    }
+
+    console.log(nameDict[searchText.value]);
+}
+submitBtn.addEventListener('click', submitClicked);
+
+const form = document.querySelector('form');
+const input = document.querySelector('input');
+
+searchText.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault(); // prevent default behavior
+    if(nameDict[searchText.value] != undefined){
+      location.href = "activity.html?id=" + nameDict[searchText.value];
+    }
+  }
+});
