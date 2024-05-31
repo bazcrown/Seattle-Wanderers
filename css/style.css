@@ -160,10 +160,12 @@ footer {
 #b2{
   display: none;
   background-image: linear-gradient(rgb(154, 72, 174), white);
-  color: rgb(87, 41, 99);
+  color: rgb(154, 72, 174);
 }
 #b3{
   display: none;
+  background-image: linear-gradient(rgb(87, 41, 99), white);
+  color: rgb(87, 41, 99);
 }
 
 .logo-link {
