@@ -155,8 +155,11 @@ footer {
 }
 
 #b1{
-  display: block;
+  display: none;
+  background-image: linear-gradient(rgb(204, 96, 232), white);
+  color: rgb(204, 96, 232);
 }
+
 #b2{
   display: none;
   background-image: linear-gradient(rgb(154, 72, 174), white);
