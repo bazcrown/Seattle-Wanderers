@@ -97,7 +97,7 @@ footer {
 
 .textContainer {
   background-color: rgb(100, 72, 107);
-  color:#04AA6D;
+  color:#ffffff;
   width: 100%;
   padding: 20px;
 }
@@ -158,14 +158,16 @@ footer {
 }
 
 .slideshow{
-  /*max-width: 1000px;*/
-  position: relative;
-  margin: auto;
+  position: static;
   vertical-align: middle;
+  padding: 50;
+  display: flex;
+  justify-content: center;
+  background: rgb(229, 174, 231);
 }
 
 .mySlides {
-  width: 100%;
+  width: auto;
   height: 500;
 }
 
