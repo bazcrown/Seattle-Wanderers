@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 <html lang = "en">
-  <head>
-    <meta charset = "UTF-8">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/contactStyle.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-      <link rel="stylesheet" type="text/css" href="./css/socialMedia.css">
-    <script src="./scripts/contactus.js" defer></script>
+ <head>
+   <meta charset = "UTF-8">
+   <title>Contact Us</title>
+   <link rel="stylesheet" type="text/css" href="./css/contactStyle.css">
+   <link rel="stylesheet" type="text/css" href="./css/style.css">
+       <link rel="stylesheet" type="text/css" href="./css/socialmedia.css">
+   <script src="./scripts/contactus.js" defer></script>
 
-  </head>
-  <body>
-    <div class="header">
-      <h1>Always Active</h1>
-  </div>
-  <nav>
-      <div class="topnav">
-          <a href="index.html" class="logo-link"><img src="seattle-wanderers.png" alt="Seattle Wanderers Logo" class="logo"></a>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="contactus.html">Contact</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="activities.html">Activities</a></li>
-          </ul>
-          <div class="search">
-              <form>
-                  <input list="search" name="search" id="searchText">
-                  <datalist id="search">
-                  </datalist>
-                  <input type="button" id="submit" name="submit" value="Submit">
-              </form>
-              <script src="./scripts/search.js"></script>
-          </div>
-      </div>
-  </nav>
+
+ </head>
+ <body>
+ <nav>
+     <div class="topnav">
+       <a href="index.html" class="logo-link"><img src="seattle-wanderers.png" alt="Seattle Wanderers Logo" class="logo"></a>
+         <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="contactus.html">Contact</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="activities.html">Activities</a></li>
+         </ul>
+         <div class="search">
+             <input type="text" placeholder="Search..">
+         </div>
+     </div>
+ </nav>
 
 
 
 
+   <div class = "background">
+     <h1> Contact Us</h1>
+     <h2>Frequently Asked Questions (FAQ)</h2>
+     <div class="faq">
+       <h3>How can I contact customer support?</h3>
+       <p>You can contact our customer support by filling out the form bellow or emailing us directly at seattleuwanderers@gmail.com.</p>
+     </div>
+     <div class="faq">
+       <h3>What is the response time for customer inquiries?</h3>
+       <p>We aim to respond to all inquiries within 24-48 hours.</p>
+     </div>
+     <div class="faq">
+       <h3>Can I update my contact information after submission?</h3>
+       <p>Yes, you can update your contact information by sending an email to support@seattlewanderers.com with the correct details.</p>
+     </div>
+     <div class="faq">
+       <h3>How do I stay updated with your latest news and events?</h3>
+       <p>Follow us on our social media channels for the latest updates.</p>
+     </div>
+     <form action="https://api.web3forms.com/submit" method="POST">
+       <input type="hidden" name="access_key" value="b577f2c5-cd3f-4e78-8641-fc14d0f4f76e">
+       <label for="name">Name:</label>
+       <input type="text" name="name" required>
 
 
-    <div class = "background">
-      <h1> Contact Us</h1>
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="b577f2c5-cd3f-4e78-8641-fc14d0f4f76e">
-        <label for="name">Name:</label>
-        <input type="text" name="name" required>
+       <label for="email">Email:</label>
+       <input type="email" id="email" name="email" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="2" required></textarea>
-        <button id="button" type="submit">Submit</button>
-      </form>
-    </div>
+       <label for="message">Message:</label>
+       <textarea id="message" name="message" rows="2" required></textarea>
+       <button id="button" type="submit">Submit</button>
+     </form>
+   </div>
 
-    <footer>
-      We're here to make finding activities easier!
-      <a href="http://www.facebook.com" class="fa fa-facebook"></a>
-      <a href="http://www.x.com" class="fa fa-twitter"></a>
-      <a href="http://www.instagram.com" class="fa fa-instagram"></a>
 
-  </footer>
-  </body>
+   <footer>
+     We're here to make finding activities easier!
+     <a href="#" class="fa fa-facebook"></a>
+     <a href="#" class="fa fa-twitter"></a>
+     <a href="#" class="fa fa-instagram"></a>
+   </footer>
+ </body>
 </html>
