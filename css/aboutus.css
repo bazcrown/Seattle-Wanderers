@@ -38,3 +38,10 @@ body {
     font-size: 16px;
     color: #333;
 }
+
+.introduction {
+    position: relative;
+    width: 70%;
+    transform: translate(-50%);
+    left: 50%;
+}
