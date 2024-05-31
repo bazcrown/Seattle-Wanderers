@@ -52,12 +52,12 @@ body {
   background-size: cover;
   overflow: auto;
  }
- form {
+ .form {
   margin: 20px auto;
   width: 250px;
   color: white;
  }
- button {
+ .button {
   width: auto;
   height: auto;
  }
@@ -68,7 +68,7 @@ body {
   text-align: left;
   margin-bottom: 10px;
  }
- textarea, input {
+ .textarea, .input {
   background: transparent;
   border: 1px solid #ccc;
   padding: 8px;
