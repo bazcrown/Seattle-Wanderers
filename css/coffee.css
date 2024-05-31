@@ -3,11 +3,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: rgb(229, 174, 231);
 }
 header {
-    background-color: #444;
-    color: white;
+    background-color: rgb(229, 174, 231);
+    color: black;
     padding: 1rem 0;
     text-align: center;
 }
@@ -32,12 +32,9 @@ p {
 .coffee-shop {
     margin-bottom: 1.5rem;
 }
-#coffee-header {
-    background-color: #6f4e37;
-}
 
 #coffee-header h1, #coffee-header p{
-    color: lavender;
+    color: #333;
 }
 
 .coffee-shop img {
