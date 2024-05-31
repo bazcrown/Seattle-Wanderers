@@ -117,6 +117,29 @@ footer {
   clear: both;
 }
 
+.containerPhotos {
+  float: left;
+  padding: 50px;
+  width: 100%
+}
+
+.containerColumn {
+  box-sizing: content-box;
+  float: left;
+  width: 33.33%;
+}
+
+.containerColumnPhoto {
+  width: 400px;
+  height: 300px;
+}
+
+.containerColumn::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .closebtn {
   float: right;
   color: white;
@@ -138,6 +161,8 @@ footer {
 }
 #b2{
   display: none;
+  background-image: linear-gradient(rgb(154, 72, 174), white);
+  color: rgb(87, 41, 99);
 }
 #b3{
   display: none;
