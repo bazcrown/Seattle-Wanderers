@@ -98,7 +98,7 @@ footer {
 .textContainer {
   background-color: rgb(100, 72, 107);
   color:#ffffff;
-  width: 100%;
+  /*width: 100%;*/
   padding: 20px;
 }
 
@@ -118,7 +118,7 @@ footer {
 .containerPhotos {
   float: left;
   padding: 50px;
-  width: 100%
+  width: 90%;
 }
 
 .containerColumn {
